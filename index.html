@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rupasri Guruprasaf - Aspiring Data Analyst skilled in Excel, SQL, Python and Power BI.">
+<meta name="theme-color" content="#0b1120">
+<title>Rupasri Guruprasaf | Data Analyst</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg:#0b1120;
+  --card:#131e32;
+  --accent:#65e0c2;
+  --text:#edf3fb;
+  --muted:#9aa9bd;
+  --border:rgba(180,198,220,.14);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:85px}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;line-height:1.7}
+.container{width:min(1100px,90%);margin:auto}
+a{color:inherit;text-decoration:none}
+nav{position:sticky;top:0;z-index:100;background:rgba(11,17,32,.95);border-bottom:1px solid var(--border);backdrop-filter:blur(15px)}
+.nav-inner{min-height:75px;display:flex;align-items:center;justify-content:space-between}
+.logo{font:800 23px 'Manrope',sans-serif}
+.logo span{color:var(--accent)}
+.nav-links{display:flex;gap:27px}
+.nav-links a{color:var(--muted);font-size:14px;transition:.3s}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--accent);color:var(--accent);border-radius:6px;padding:11px 17px;font-size:14px;font-weight:700;transition:.3s}
+.nav-cta:hover,.btn:hover{background:var(--accent);color:#07131b;transform:translateY(-3px)}
+.menu{display:none;background:none;color:white;border:1px solid var(--border);padding:8px 12px;border-radius:6px}
+.hero{min-height:620px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:55px;padding:70px 0}
+.eyebrow{color:var(--accent);font:12px 'DM Mono',monospace;letter-spacing:2px;text-transform:uppercase}
+.hero h1{font:800 clamp(42px,6vw,76px)/1.12 'Manrope',sans-serif;letter-spacing:-3px;margin:20px 0}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--muted);max-width:600px;font-size:17px}
+.buttons{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn.primary{background:var(--accent);color:#07131b}
+.availability{margin-top:25px;font-size:13px;color:var(--muted)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin-right:9px}
+.visual{background:linear-gradient(145deg,#192943,#101a2b);border:1px solid var(--border);border-radius:14px;padding:28px;box-shadow:0 20px 60px rgba(0,0,0,.2)}
+.visual-title{color:var(--muted);font:12px 'DM Mono',monospace}
+.chart{height:170px;display:flex;align-items:end;gap:12px;margin-top:25px;border-bottom:1px solid var(--border)}
+.bar{flex:1;background:linear-gradient(to top,#287b75,var(--accent));border-radius:5px 5px 0 0;animation:grow 1.2s ease}
+.bar:nth-child(1){height:35%}.bar:nth-child(2){height:55%}.bar:nth-child(3){height:45%}.bar:nth-child(4){height:75%}.bar:nth-child(5){height:60%}.bar:nth-child(6){height:90%}.bar:nth-child(7){height:100%}
+@keyframes grow{from{transform:scaleY(.1)}to{transform:scaleY(1)}}
+.chart-label{display:flex;justify-content:space-between;font:10px 'DM Mono',monospace;color:var(--muted);margin-top:12px}
+.visual-bottom{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:25px}
+.visual-box{background:rgba(255,255,255,.04);border:1px solid var(--border);padding:15px;border-radius:8px}
+.visual-box strong{display:block;color:var(--accent)}
+.visual-box small{color:var(--muted)}
+section{padding:85px 0}
+.section-heading{margin-bottom:35px}
+.section-heading h2{font:800 clamp(30px,4vw,43px) 'Manrope',sans-serif;letter-spacing:-1.5px;margin-top:10px}
+.section-heading p{color:var(--muted);max-width:580px;margin-top:12px}
+.panel{background:linear-gradient(145deg,#16243a,#111c2e);border:1px solid var(--border);border-radius:11px;padding:27px}
+.panel p{color:var(--muted);margin-bottom:15px}
+.panel p:last-child{margin-bottom:0}
+.about-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}
+.focus-item{display:flex;gap:13px;margin-top:18px;color:var(--muted)}
+.focus-icon{color:var(--accent);font-size:20px}
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill-card h3{font:700 17px 'Manrope',sans-serif;margin-bottom:18px}
+.tags{display:flex;flex-wrap:wrap;gap:9px}
+.tag{color:#c4d0df;background:rgba(255,255,255,.04);border:1px solid var(--border);border-radius:5px;padding:7px 11px;font-size:12px}
+.projects-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.project{transition:.3s;display:flex;flex-direction:column}
+.project:hover{transform:translateY(-5px);border-color:var(--accent)}
+.project-label{color:var(--accent);font:11px 'DM Mono',monospace;text-transform:uppercase;letter-spacing:1px}
+.project h3{font:700 20px 'Manrope',sans-serif;margin:15px 0 10px}
+.project p{color:var(--muted);font-size:14px}
+.project .tags{margin-top:auto;padding-top:18px}
+.project-link{color:var(--accent);font-size:13px;font-weight:700;margin-top:22px}
+.timeline{border-left:1px solid rgba(101,224,194,.4);margin-left:9px;padding-left:28px}
+.timeline-item{position:relative;margin-bottom:32px}
+.timeline-item:last-child{margin-bottom:0}
+.timeline-item:before{content:"";position:absolute;left:-33px;top:7px;width:9px;height:9px;background:var(--accent);border-radius:50%}
+.timeline-item small{color:var(--accent);font:11px 'DM Mono',monospace}
+.timeline-item h3{font:700 17px 'Manrope',sans-serif;margin:5px 0}
+.timeline-item p{color:var(--muted);font-size:14px}
+.contact-box{background:linear-gradient(110deg,#193b43,#14233a);border:1px solid rgba(101,224,194,.25);border-radius:12px;padding:38px;display:flex;justify-content:space-between;align-items:center;gap:25px}
+.contact-box h2{font:800 32px 'Manrope',sans-serif;margin:10px 0}
+.contact-box p{color:var(--muted)}
+footer{border-top:1px solid var(--border);padding:25px 0;color:var(--muted);font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.socials{display:flex;gap:18px}
+.socials a:hover{color:var(--accent)}
+.reveal{opacity:0;transform:translateY(20px);transition:.7s ease}
+.reveal.show{opacity:1;transform:translateY(0)}
+@media(max-width:850px){.hero{grid-template-columns:1fr;gap:35px;min-height:auto}.visual{max-width:520px}.skills-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){
+.nav-inner{min-height:68px}.menu{display:block;cursor:pointer}
+.nav-links{display:none;position:absolute;top:68px;left:0;right:0;background:#101a2b;padding:20px 5%;border-bottom:1px solid var(--border);flex-direction:column;align-items:flex-start;gap:18px}
+.nav-links.open{display:flex}.hero{padding-top:70px}.hero h1{letter-spacing:-2px}
+section{padding:65px 0}.about-grid,.projects-grid,.skills-grid{grid-template-columns:1fr}
+.contact-box{align-items:flex-start;flex-direction:column;padding:27px}
+.contact-box h2{font-size:27px}.footer-inner{flex-direction:column}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
+</style>
+</head>
+
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a href="#home" class="logo">RG<span>.</span></a>
+    <button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#about">About</a><a href="#skills">Skills</a>
+      <a href="#projects">Projects</a><a href="#journey">Journey</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="#contact" class="nav-cta">Let's connect ↗</a>
+  </div>
+</nav>
+
+<main>
+<header class="container hero" id="home">
+  <div>
+    <div class="eyebrow">Data Analyst · Insight-driven problem solver</div>
+    <h1>Turning data<br>into <span>direction.</span></h1>
+    <p>
+      Hi, I'm <strong>Rupasri Guruprasaf</strong>. I'm passionate about exploring
+      data, discovering meaningful patterns and turning information into insights
+      that support better decisions.
+    </p>
+    <div class="buttons">
+      <a href="#projects" class="btn primary">Explore my work ↗</a>
+      <a href="#contact" class="btn">Get in touch</a>
+    </div>
+    <div class="availability"><span class="dot"></span>Open to learning, collaboration and opportunities</div>
+  </div>
+  <div class="visual">
+    <div class="visual-title">DATA / INSIGHTS</div>
+    <div class="chart" aria-label="Decorative data chart">
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+      <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+    </div>
+    <div class="chart-label"><span>EXPLORE</span><span>ANALYSE</span><span>COMMUNICATE</span></div>
+    <div class="visual-bottom">
+      <div class="visual-box"><strong>Curiosity</strong><small>Ask better questions</small></div>
+      <div class="visual-box"><strong>Clarity</strong><small>Make insights useful</small></div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="eyebrow">01 / About</div><h2>A little about me.</h2>
+      <p>Combining analytical thinking with clear communication to make data easier to understand.</p>
+    </div>
+    <div class="about-grid reveal">
+      <div class="panel">
+        <p>I'm Rupasri, an aspiring Data Analyst interested in transforming raw information into clear and useful insights.</p>
+        <p>I enjoy asking questions, preparing data, exploring trends and communicating findings through meaningful visualisations.</p>
+        <p>I'm developing my analytical skills through practical projects and continuous learning. This portfolio showcases my progress and the projects I create along the way.</p>
+      </div>
+      <div class="panel">
+        <div class="eyebrow">What I focus on</div>
+        <div class="focus-item"><span class="focus-icon">⌕</span><div><strong>Data exploration</strong><br><span class="muted">Finding patterns, trends and insights.</span></div></div>
+        <div class="focus-item"><span class="focus-icon">▤</span><div><strong>Data visualisation</strong><br><span class="muted">Making information clear and accessible.</span></div></div>
+        <div class="focus-item"><span class="focus-icon">↗</span><div><strong>Problem solving</strong><br><span class="muted">Using evidence to answer practical questions.</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="eyebrow">02 / Capabilities</div><h2>Tools & skills.</h2>
+      <p>My current data analytics toolkit.</p>
+    </div>
+    <div class="skills-grid reveal">
+      <div class="panel skill-card"><h3>Data analysis</h3><div class="tags">
+        <span class="tag">Data cleaning</span><span class="tag">Exploratory analysis</span><span class="tag">Trend analysis</span><span class="tag">Critical thinking</span>
+      </div></div>
+      <div class="panel skill-card"><h3>Tools & technologies</h3><div class="tags">
+        <span class="tag">Microsoft Excel</span><span class="tag">SQL</span><span class="tag">Python</span><span class="tag">Power BI</span>
+      </div></div>
+      <div class="panel skill-card"><h3>Visualisation</h3><div class="tags">
+        <span class="tag">Dashboards</span><span class="tag">Data storytelling</span><span class="tag">Charts</span><span class="tag">Reporting</span>
+      </div></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="eyebrow">03 / Selected work</div><h2>Projects that tell a story.</h2>
+      <p>These are project ideas. Replace them with your completed work, findings and repository links before presenting them as finished projects.</p>
+    </div>
+    <div class="projects-grid reveal">
+      <article class="panel project">
+        <div class="project-label">Project idea 01</div><h3>Sales Performance Analysis</h3>
+        <p>Analyse sales data to identify top-performing products, monthly trends and regional patterns. Present findings in a clear dashboard.</p>
+        <div class="tags"><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">Visualisation</span></div>
+        <a class="project-link" href="https://github.com/rupa0807" target="_blank" rel="noopener noreferrer">View my GitHub ↗</a>
+      </article>
+      <article class="panel project">
+        <div class="project-label">Project idea 02</div><h3>Customer Insights with SQL</h3>
+        <p>Explore customer behaviour, segment customers and answer business questions using SQL queries and a structured sample dataset.</p>
+        <div class="tags"><span class="tag">SQL</span><span class="tag">Data cleaning</span><span class="tag">Analysis</span></div>
+        <a class="project-link" href="https://github.com/rupa0807" target="_blank" rel="noopener noreferrer">View my GitHub ↗</a>
+      </article>
+      <article class="panel project">
+        <div class="project-label">Project idea 03</div><h3>Exploratory Data Analysis</h3>
+        <p>Investigate a public dataset with Python, handle missing values, explore relationships and communicate findings through visualisations.</p>
+        <div class="tags"><span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Matplotlib</span></div>
+        <a class="project-link" href="https://github.com/rupa0807" target="_blank" rel="noopener noreferrer">View my GitHub ↗</a>
+      </article>
+      <article class="panel project">
+        <div class="project-label">Project idea 04</div><h3>Your next data project</h3>
+        <p>Use this space for a project you complete. Explain the question, your approach, the tools used and the outcome.</p>
+        <div class="tags"><span class="tag">Your tools</span><span class="tag">Your analysis</span></div>
+        <a class="project-link" href="https://github.com/rupa0807" target="_blank" rel="noopener noreferrer">View my GitHub ↗</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="journey">
+  <div class="container">
+    <div class="section-heading reveal">
+      <div class="eyebrow">04 / Background</div><h2>My learning journey.</h2>
+      <p>A space for my education, certifications and professional development.</p>
+    </div>
+    <div class="panel reveal">
+      <div class="timeline">
+        <div class="timeline-item"><small>CURRENT</small><h3>Building my Data Analytics portfolio</h3><p>Developing practical projects and strengthening my skills in Excel, SQL, Python and Power BI.</p></div>
+        <div class="timeline-item"><small>EDUCATION DETAILS TO BE ADDED</small><h3>Education</h3><p>My qualification, institution and dates will be added here.</p></div>
+        <div class="timeline-item"><small>ADD YOUR DATES</small><h3>Courses & certifications</h3><p>Add relevant courses, certificates, workshops and learning milestones.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <div class="contact-box reveal">
+      <div>
+        <div class="eyebrow">05 / Contact</div><h2>Let's make data meaningful.</h2>
+        <p>Have an opportunity, project idea or simply want to connect? I'd love to hear from you.</p>
+      </div>
+      <a class="btn primary" href="mailto:your.email@example.com">Email me ↗</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <span>© <span id="year"></span> Rupasri Guruprasaf. Built with curiosity & data.</span>
+    <div class="socials">
+      <a href="https://www.linkedin.com/in/rupasrigu/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+      <a href="https://github.com/rupa0807" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menu = document.getElementById("menu");
+  const navLinks = document.getElementById("navLinks");
+
+  menu.addEventListener("click", () => {
+    const open = navLinks.classList.toggle("open");
+    menu.setAttribute("aria-expanded", String(open));
+    menu.textContent = open ? "✕" : "☰";
+  });
+
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menu.setAttribute("aria-expanded", "false");
+      menu.textContent = "☰";
+    });
+  });
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll(".reveal").forEach(item => observer.observe(item));
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
